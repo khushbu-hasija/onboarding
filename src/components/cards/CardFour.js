@@ -47,7 +47,10 @@ export default function RecipeReviewCard() {
         </Typography>
       </CardContent>
       <CardActions style={{justifyContent: 'center'}}>
-      <Button variant="outlined">Navigate</Button>
+      <Button variant="outlined">
+        <a href="https://khushbu-hasija.github.io/routes/" target="_blank" rel="noopener noreferrer">
+      Navigate
+      </a></Button>
       </CardActions>
       </CardActionArea>
     </Card>

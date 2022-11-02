@@ -10,12 +10,9 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import MapIcon from '@mui/icons-material/Map';
 import NearMeIcon from '@mui/icons-material/NearMe';
 
-const handleDashboardClick = () =>{
-  
-}
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton onClick={handleDashboardClick}>
+    <ListItemButton>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
@@ -37,7 +34,7 @@ export const mainListItems = (
       <ListItemIcon>
         <NearMeIcon />
       </ListItemIcon>
-      <ListItemText primary="Nearby" />
+      <ListItemText primary="Nearby"/>
     </ListItemButton>
   </React.Fragment>
 );

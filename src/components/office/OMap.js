@@ -45,7 +45,8 @@ function MyComponent() {
   }, [])
 
   return isLoaded ? (
-<><div id="map"></div> <DistanceMatrixService
+<>
+<div id="map"></div> <DistanceMatrixService
     options={{
               destinations: [{ lat:19.180297715731893, lng: 72.83190245506327 }],
               origins: [{lat: 19.201571593443305, lng:72.83918016209492}],

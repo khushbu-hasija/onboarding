@@ -99,6 +99,7 @@ function DashboardContent() {
   const [isDashBoard, setDashboard] = useState(true);
   const [isOfficeLoc, setOfficeLoc] = useState(false);
   const [isNearby, setNearby] = useState(false);
+  const [isRoute, setRoute] = useState(false);
   
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -162,6 +163,7 @@ function DashboardContent() {
               setDashboard(true)
               setNearby(false)
               setOfficeLoc(false)
+              setRoute(false)
             }}>
             <ListItemIcon>
               <DashboardIcon />
@@ -177,6 +179,7 @@ function DashboardContent() {
           <ListItemButton onClick={() => {
               setDashboard(false)
               setNearby(false)
+              setRoute(false)
               setOfficeLoc(true)
             }}>
             <ListItemIcon>
@@ -186,8 +189,9 @@ function DashboardContent() {
           </ListItemButton>
           <ListItemButton onClick={() => {
               setDashboard(false)
-              setNearby(true)
+              setNearby(false)
               setOfficeLoc(false)
+              setRoute(true)
             }}>
             <ListItemIcon>
               <NearMeIcon />
@@ -198,6 +202,7 @@ function DashboardContent() {
               setDashboard(false)
               setNearby(true)
               setOfficeLoc(false)
+              setRoute(false)
             }}>
             <ListItemIcon>
               <NearMeIcon />
@@ -244,8 +249,11 @@ function DashboardContent() {
               </Grid>
             </Grid> : null}
             { isNearby ? 
-            <NearbyMap/> : null}
-            { isOfficeLoc ? <OMap/> : null}
+            <><p>Please zoom out!</p><NearbyMap/></> : null}
+            { isOfficeLoc ? <iframe src="https://khushbu-hasija.github.io/nearby/" width="940" height="550"></iframe>
+ : null}  
+            { isRoute ? <iframe src="https://khushbu-hasija.github.io/routes/" width="940" height="550"></iframe>
+ : null}
             <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
